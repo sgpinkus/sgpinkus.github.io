@@ -1,0 +1,20 @@
+image: ruby:2.1
+
+before_script:
+  - apt-get update -qq -y
+  - apt-get install -y -qq nodejs-legacy npm
+  - npm install -g bower
+  - gem install bundler --no-ri --no-rdoc
+  - gem install jekyll
+
+pages:
+  stage: deploy
+  script:
+    - bower --allow-root install
+    - bundle
+    - bundle exec jekyll build -d public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

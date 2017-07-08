@@ -26,6 +26,9 @@ The bower part: You need `npm` and `bower` installed. Then just run this which p
 
     $ bower install --force
 
+## Github Setup
+Note because of the minor gem dependencies, this theme won't currently build properly with github pages (gh-pages). Github support for static sites is pretty limited, but there is two work arounds. 1. Don't put your main development branch in `master` then `git subtree split --prefix=_site/ --branch master`. 2. Use master branch and build into it with `bundle exec jekyll build -d docs` then set the option for serving out of docs/ in github settings.
+
 # Configuration
 This is a list of all site configuration variables used in templates. See [_config.yml](_config.yml) sample configuration.
 

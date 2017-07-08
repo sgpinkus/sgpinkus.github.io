@@ -1,6 +1,7 @@
 *.gem
 .bundle
 .sass-cache
-_site
+Gemfile
 Gemfile.lock
-bower_components/
+new-post.sh
+
