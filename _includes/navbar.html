@@ -1,0 +1,30 @@
+<div id="navbar" class="structure">
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+      {% if site.navbar.logo %}
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="padding:0" href="{{ "/" | relative_url }}"><img src="{{ site.navbar.logo | relative_url }}" alt="home" /></a>
+      </div>
+      {% endif %}
+      {% if site.navbar.menu %}
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        {% for item in site.navbar.menu %}
+          <li role="presentation">
+            <a href="{{ item[1] | relative_url }}" aria-controls="messages">{{ item[0] }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+        {% if site.navbar.social %}
+          {% include social-links.html size="2x" class="nav navbar-nav navbar-right text-right" %}
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </nav>
+</div>

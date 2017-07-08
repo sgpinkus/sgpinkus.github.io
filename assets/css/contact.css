@@ -1,0 +1,26 @@
+---
+my-margin: 20px
+---
+.contact > div {
+  margin: {{ page.my-margin }}
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form p {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width:100%;
+}
+
+.contact-form p {
+  width: 100%;
+}
+
+.contact-form textarea {
+  width: 100%;
+}

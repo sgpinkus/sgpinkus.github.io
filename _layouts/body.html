@@ -1,0 +1,20 @@
+---
+# Every page has a header, main article (content) and footer.
+# The header always include a navbar with a menu. It may optionally include a banner image.
+# The article may include a aside. The side bar currently has a static format.
+layout: default
+---
+<body>
+  {% include header.html %}
+  <article id="article" class="structure">
+    <div>
+      <div id="content" class="structure col-xs-12 col-md-9">
+        {{ content }}
+      </div>
+      {% if page.structure.aside %}
+      {% include aside.html %}
+      {% endif %}
+    </div>
+  </article>
+  {% include footer.html %}
+</body>

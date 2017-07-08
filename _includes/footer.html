@@ -1,0 +1,18 @@
+<footer class="row flex-row">
+  <ul id="footer-nav-one" class="structure text-center">
+    <li>
+      <span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;<a href="#">{{ site.title | default: "someone" }}</a>
+    </li>
+	  {% if site.designer %}
+	  <li>
+	    <span>By: <a href="{{ site.designer.url }}" target="_blank">{{ site.designer.name }}</a></span>
+	  </li>
+	  {% endif %}
+  </ul>
+  {% if site.structure.footer-nav-two %}
+    {% include footer-nav-two.html %}
+  {% endif %}
+  {% if site.structure.footer-nav-three %}
+    {% include footer-nav-three.html %}
+  {% endif %}
+</footer>

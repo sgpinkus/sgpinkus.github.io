@@ -1,0 +1,12 @@
+<aside id="aside" class="structure col-xs-3">
+{% include post-latest-list.html %}
+{% if page.collection == "posts" %}
+  {% include post-related-list.html %}
+  {% include post-share-buttons.html %}
+{% endif %}
+{% if page.collection == "posts" or paginator.posts %}
+<div class="text-center">
+  <a href="{{ "feed.xml" | relative_url }}" class="btn btn-primary" icon="rss" link="{{ "feed.xml" | relative_url }}">Subscribe to posts</a>
+</div>
+{% endif %}
+</aside>

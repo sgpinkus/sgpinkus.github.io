@@ -1,0 +1,14 @@
+{% capture share_twitter %}
+https://twitter.com/intent/tweet/?text={{ page.title | uri_escape }}&amp;url={{ page.url | absolute_url }}{% endcapture %}
+{% capture share_facebook %}
+https://facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}{% endcapture %}
+{% capture share_google %}
+https://plus.google.com/share?url={{ page.url | absolute_url }}{% endcapture %}
+<div>
+  <h2>Share</h2>
+  <div>
+    <a href="{{ share_twitter }}" class="fa fa-twitter fa-2x"></a>
+    <a href="{{ share_facebook }}" class="fa fa-facebook fa-2x"></a>
+    <a href="{{ share_google }}" class="fa fa-google fa-2x"></a>
+  </div>
+</div>

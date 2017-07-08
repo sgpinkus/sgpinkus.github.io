@@ -1,0 +1,14 @@
+<h2>Latest posts</h2>
+{% assign posts_size = site.posts | size %}
+{% if posts_size %}
+<ul class="post-list post-list-latest">
+  {% for post in site.posts | limit: 4 %}
+    <li>
+        <h5><a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a></h5>
+        {{ post.excerpt | markdownify | truncatewords: 10 }}
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>No posts yet</p>
+{% endif %}

@@ -1,0 +1,51 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: "My Site"
+email: your-email@domain.com
+# Annoyingly this *MUST* be defined. If content served from root path set to empty string *NOT* "/".
+baseurl: "/jekyll-bootstrap-structure"
+url: ""
+# See _data/social_sites_db.yml for list of support sites.
+designer:
+  name: sam-at-github
+  url: https://github.io/sam-at-github/
+#google_analytics_id: UA-88127304-1
+# navbar links must be absolute
+navbar:
+  menu:
+    Home: /
+    Contact: /contact/
+    About: /about/
+    Blog: /blog/
+  logo: /assets/brand-logo.png
+  social:
+    github: /
+    stack-overflow: /
+    twitter: /
+# Use this to include optional structural components
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      structure:
+        aside: true
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      structure:
+        aside: true
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+  - octopress-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - tests/
+  - "*.sh"

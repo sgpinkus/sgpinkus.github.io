@@ -1,0 +1,13 @@
+{% assign related_posts_size = site.related_posts | size %}
+{% if related_posts_size > 0 %}
+<h2>Related posts</h2>
+<ul class="post-list post-list-related">
+{% for post in site.related_posts limit: 3 %}
+  <li>
+    <h5><a href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a></h5>
+    {% include post-meta.html %}
+    {{ post.excerpt | markdownify | truncatewords: 20 }}
+  </li>
+{% endfor %}
+</ul>
+{% endif %}

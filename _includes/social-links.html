@@ -1,0 +1,13 @@
+{% assign social_sites_db = "bitbucket digg dropbox facebook flickr foursquare github google google-plus instagram jsfiddle linkedin pinterest reddit skype soundcloud spotify stack-exchange stack-overflow steam stumbleupon tumblr twitter vimeo-square vine windows wordpress yahoo youtube" | split:" " %}
+<ul class="social-links {{ include.class }}">
+{% for name in social_sites_db %}
+  {% if site.navbar.social[name] %}
+  {% assign link = site.navbar.social[name] %}
+  <li>
+    <a href="{{ link }}">
+      <i class="fa fa-{{ name }} fa-{{ include.size | default: 'lg' }} {% if include.labels %}fa-x-label{% endif -%}"></i>{{ include.separator  }}
+    </a>
+  </li>
+  {% endif %}
+{% endfor -%}
+</ul>
