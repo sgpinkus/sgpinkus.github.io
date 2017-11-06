@@ -6,7 +6,7 @@
 title: "My Site"
 email: your-email@domain.com
 # Annoyingly this *MUST* be defined. If content served from root path set to empty string *NOT* "/".
-baseurl: "/jekyll-bootstrap-structure"
+baseurl: ""
 url: ""
 # See _data/social_sites_db.yml for list of support sites.
 designer:
@@ -19,7 +19,7 @@ navbar:
     Home: /
     Contact: /contact/
     About: /about/
-    Blog: /blog/
+    Posts: /posts/
   logo: /assets/brand-logo.png
   social:
     github: /
@@ -32,13 +32,22 @@ defaults:
       type: "pages"
     values:
       structure:
+        aside: false
+  - scope:
+      path: "posts"
+      type: "pages"
+    values:
+      structure:
         aside: true
+      paginate:
+        per_page: 10
   - scope:
       path: ""
       type: "posts"
     values:
       structure:
         aside: true
+      pinned: 0
 # Build settings
 markdown: kramdown
 gems:

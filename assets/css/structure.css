@@ -48,12 +48,10 @@ footer {
   margin-bottom: {{ page.my-margin-bottom }};
 }
 
-
-
 .flex-row {
   display: flex;
 }
 
-.flex-row [class|="col"]:first-child {
+.flex-row > div:first-child {
   flex-grow: 1;
 }

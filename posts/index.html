@@ -1,0 +1,24 @@
+---
+layout: page
+title: Posts
+---
+<ul class="post-index post-list">
+  {% assign posts_pinned = paginator.posts | where_exp:"item", "item.pinned >= 1" | reversed %}
+  {% assign posts_unpinned = paginator.posts | where_exp:"item", "item.pinned == 0" %}
+  {% assign posts = posts_pinned | concat: posts_unpinned %}
+	{% for page in posts_pinned %}
+	<li>
+			<h2><a href="{{ page.url | relative_url }}" title="{{ page.title }}">{{ page.title }}</a></h2>
+			{% include post-meta.html %}
+			{{ page.excerpt | markdownify | truncatewords: 60 }}
+	</li>
+	{% endfor %}
+	{% for page in posts_unpinned %}
+	<li>
+			<h2><a href="{{ page.url | relative_url }}" title="{{ page.title }}">{{ page.title }}</a></h2>
+			{% include post-meta.html %}
+			{{ page.excerpt | markdownify | truncatewords: 60 }}
+	</li>
+	{% endfor %}
+</ul>
+{% include post-pagination.html %}

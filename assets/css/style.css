@@ -36,6 +36,7 @@ footer li:not(:first-child):before {
 
 .navbar {
   border: 0;
+  margin-bottom: 0;
 }
 
 /*
