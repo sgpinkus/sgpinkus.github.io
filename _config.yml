@@ -5,26 +5,21 @@
 # in the templates via {{ site.myvariable }}.
 title: "My Site"
 email: your-email@domain.com
-# Annoyingly this *MUST* be defined. If content served from root path set to empty string *NOT* "/".
+# This *MUST* be defined. If content served from root path set to empty string *NOT* "/".
 baseurl: ""
 url: ""
-# See _data/social_sites_db.yml for list of support sites.
-designer:
-  name: sam-at-github
-  url: https://github.io/sam-at-github/
-#google_analytics_id: UA-88127304-1
-# navbar links must be absolute
-navbar:
-  menu:
-    Home: /
-    Contact: /contact/
-    About: /about/
-    Posts: /posts/
-  logo: /assets/brand-logo.png
-  social:
-    github: /
-    stack-overflow: /
-    twitter: /
+# Build settings
+# If you install this theme as a ruby gem theme uncomment this line.
+# theme: jekyll-bootstrap-structure
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - octopress-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - tests/
+  - "*.sh"
 # Use this to include optional structural components
 defaults:
   - scope:
@@ -48,13 +43,20 @@ defaults:
       structure:
         aside: true
       pinned: 0
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - octopress-paginate
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - tests/
-  - "*.sh"
+# See _data/social_sites_db.yml for list of support sites.
+designer:
+  name: sam-at-github
+  url: https://github.io/sam-at-github/
+#google_analytics_id: UA-88127304-1
+# navbar links must be absolute
+navbar:
+  menu:
+    Home: /
+    Contact: /contact/
+    About: /about/
+    Posts: /posts/
+  logo: /assets/brand-logo.png
+  social:
+    github: /
+    stack-overflow: /
+    twitter: /

@@ -2,32 +2,29 @@
 Provides a scaffold for a HTML site based on [bootstrap's](https://getbootstrap.com/docs/3.3/) [grid system](https://getbootstrap.com/docs/3.3/css/#grid) and bootstrap framework in general. See [Layout](#layout).
 
 # Installation
-You can use this theme as the basis of a site or as a proper theme. When you package it as a theme, all the sample pages are excluded by default so you'll have to write you own from scratch. You'll also need to install the `bower` dependencies to you project. To install as a theme, add this line to your Jekyll site's Gemfile:
+There is two ways to install jekyll themes:
 
-```ruby
-gem "jekyll-bootstrap-structure"
-```
+  1. Just clone the repo as the basis for site builds.
+  2. Install as a jekyll ruby gem.
 
-And add this line to your Jekyll site's `_config.yml`:
+## As a Basis for a site.
 
-```yaml
-theme: jekyll-bootstrap-structure
-```
+    git clone <this-repo>
+    bundle install
+    bower install --force
+    bower install
+    bundle exec jekyll build && bundle exec serve
 
-And then execute:
+## As a Ruby Gem Theme
+Is a bit of a pain in the butt.
 
-    $ bundle
+  1. jekyll new my-theme && cd my-theme
+  2. copy the `_config.yml`, `Gemfile` and `bower.json` from this repo into the new jekyll project overwriting the default ones.
+  3. Uncomment the lines about "jekyll-bootstrap-structure" int the `Gemfile` and `_config.yml`.
+  4. Install as above.
 
-Or install it yourself as:
-
-    $ gem install jekyll-bootstrap-structure
-
-The bower part: You need `npm` and `bower` installed. Then just run this which pull in a bunch of stuff into `bower_components/`:
-
-    $ bower install --force
-
-## Github Setup
-Note because of the minor gem dependencies, this theme won't auto build properly with github pages (gh-pages). Github support for static sites is pretty limited, but you can just build the site locally then upload.
+## GH-Pages Setup
+Because of the minor gem dependencies and bower deps this theme won't auto build properly with github pages (gh-pages). Github support for static sites is pretty limited. Just build the site locally then upload.
 
 # Configuration
 This is a list of all site configuration variables used in templates. See [_config.yml](_config.yml) sample configuration.

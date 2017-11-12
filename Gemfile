@@ -7,12 +7,8 @@ gem "jekyll", "~> 3.6"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima"
 gem "nokogiri"
-# To use GitHub Pages, remove the "gem "jekyll"" above and uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-# The theme for the site
-# gem "alembic-jekyll-theme"
-# If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed"
    gem "octopress-paginate"
 end
+# gem "jekyll-bootstrap-structure", :git => "git@gitlab.com:sgpinkus/jekyll-bootstrap-structure.git"
