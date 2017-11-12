@@ -5,10 +5,8 @@ ruby RUBY_VERSION
 # Run Jekyll with `bundle exec jekyll` to ensure this version is used.
 gem "jekyll", "~> 3.6"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima"
-gem "nokogiri"
 group :jekyll_plugins do
    gem "jekyll-feed"
    gem "octopress-paginate"
 end
-# gem "jekyll-bootstrap-structure", :git => "git@gitlab.com:sgpinkus/jekyll-bootstrap-structure.git"
+# gem "jekyll-bootstrap-structure", :git => "https://gitlab.com/sgpinkus/jekyll-bootstrap-structure.git"
