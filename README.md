@@ -4,24 +4,30 @@ Provides a scaffold for a HTML site based on [bootstrap's](https://getbootstrap.
 # Installation
 There is two ways to install jekyll themes:
 
-  1. Just clone the repo as the basis for site builds.
+  1. Clone the repo and add start adding your content to a fork.
   2. Install as a jekyll ruby gem.
 
 ## As a Basis for a site.
 
-    git clone <this-repo>
+    git clone ...jekyll-bootstrap-structure
     bundle install
     bower install --force
-    bower install
-    bundle exec jekyll build && bundle exec serve
+    bundle exec jekyll build
 
 ## As a Ruby Gem Theme
-Is a bit of a pain in the butt.
+Ruby gem style themes basically provide default components of a Jekyll site. Specifically they provide defaults for `_layouts/`, `_includes/`, `_sass/`, and `assets/` directories. That's a problem here because we want `bower.json` manifest file for JS deps, and `posts/` from the theme. You could copy them into your content repo. Or you can install the gem then copy these files out of the gem's location:
 
-  1. jekyll new my-theme && cd my-theme
-  2. copy the `_config.yml`, `Gemfile` and `bower.json` from this repo into the new jekyll project overwriting the default ones.
-  3. Uncomment the lines about "jekyll-bootstrap-structure" int the `Gemfile` and `_config.yml`.
-  4. Install as above.
+    cd /tmp/ && git clone ...jekyll-bootstrap-structure && cd - # Get a jekyll conf to work with.
+    jekyll new my-theme && cd my-theme
+    cp -f /tmp/jekyll-bootstrap-structure/{_config.yml,Gemfile}
+    edit Gemfile _config.yml # Uncomment lines about jekyll-bootstrap-structure.
+
+Then the build is like:
+
+    bundle install # Installs jekyll-bootstrap-structure as a gem in your ruby path.
+    cp -a $(bundle info --path jekyll-bootstrap-structure)/{posts/,bower.json} .
+    bower install --force
+    bundle exec jekyll build
 
 ## GH-Pages Setup
 Because of the minor gem dependencies and bower deps this theme won't auto build properly with github pages (gh-pages). Github support for static sites is pretty limited. Just build the site locally then upload.
