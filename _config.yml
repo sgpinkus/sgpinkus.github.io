@@ -50,7 +50,7 @@ defaults:
       pinned: 0
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
   - octopress-paginate
 exclude:

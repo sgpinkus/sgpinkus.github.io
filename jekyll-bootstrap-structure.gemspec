@@ -3,11 +3,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-bootstrap-structure"
   spec.version       = "0.1.0"
-  spec.authors       = ["sam-at-github"]
+  spec.authors       = ["sgpinkus"]
   spec.email         = ["sgpinkus@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{ Write a short summary, because Rubygems requires one.}
+  spec.homepage      = "https://nowhere.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
