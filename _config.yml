@@ -6,7 +6,7 @@
 title: "My Site"
 email: your-email@domain.com
 # This *MUST* be defined. If content served from root path set to empty string *NOT* "/".
-baseurl: ""
+baseurl: "/jekyll-bootstrap-structure"
 url: ""
 # Build settings
 # If you install this theme as a ruby gem theme uncomment this line.
