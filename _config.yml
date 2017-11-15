@@ -45,9 +45,9 @@ defaults:
       pinned: 0
 # See _data/social_sites_db.yml for list of support sites.
 designer:
-  name: sam-at-github
-  url: https://github.io/sam-at-github/
-#google_analytics_id: UA-88127304-1
+  name: sgpinkus
+  url: https://github.io/sgpinkus/
+google_analytics_id: UA-xxxxxxxx-x
 # navbar links must be absolute
 navbar:
   menu:

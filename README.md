@@ -10,7 +10,7 @@ There is two ways to install jekyll themes:
 ## As a Basis for a site.
 
     git clone ...jekyll-bootstrap-structure
-    bundle install
+    bundle install --path vendor/bundle
     bower install --force
     bundle exec jekyll build
 

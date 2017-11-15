@@ -7,12 +7,12 @@
     <meta charset="utf-8" />
     <script src="{{ "bower_components/jquery/dist/jquery.min.js" | relative_url }}"></script>
     <script src="{{ "bower_components/bootstrap/dist/js/bootstrap.min.js" | relative_url }}"></script>
-    {% if site.google_analytics_id %}<script src="{{ "assets/js/google-analytics.js" | relative_url }}"></script>{% endif %}
     <link rel="stylesheet" href="{{ "bower_components/bootstrap/dist/css/bootstrap.css"  | relative_url }}"/>
     <link rel="stylesheet" href="{{ "bower_components/font-awesome/css/font-awesome.min.css" | relative_url }}"/>
     <link rel="stylesheet" href="{{ "assets/css/font-awesome-social-name-before.css" | relative_url }}"/>
     <link rel="stylesheet" href="{{ "assets/css/structure.css" | relative_url }}"/>
     <link rel="stylesheet" href="{{ "assets/css/style.css" | relative_url }}"/>
+    {% include google-analytics.js %}
     {% for i in page.scripts %}
     <script src="{{ i | relative_url }}"></script>
     {% endfor %}

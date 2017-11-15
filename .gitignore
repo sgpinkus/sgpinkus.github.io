@@ -1,7 +1,0 @@
-*.gem
-.bundle
-.sass-cache
-Gemfile
-Gemfile.lock
-new-post.sh
-
