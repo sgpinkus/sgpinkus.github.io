@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  display:flex;
+  flex-flow: column wrap;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header {
+}
+
+footer {
+}
+
+#article {
+  flex: 1;
+}
+
+#article, #navbar, #banner, footer *[id|="footer-nav"] {
+  margin: 0 auto;
+}
+
+
+#article, #navbar, #banner, footer *[id|="footer-nav"] {
+  width: 1200px;
+}
+
+
+#navbar {
+}
+
+#aside .btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-row > div:first-child {
+  flex-grow: 1;
+}

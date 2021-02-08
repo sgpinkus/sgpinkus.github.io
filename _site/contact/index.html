@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Site</title>
+    <meta charset="utf-8" />
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/assets/css/font-awesome-social-name-before.css"/>
+    <link rel="stylesheet" href="/assets/css/structure.css"/>
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxxxx-x"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-xxxxxxxx-x');
+</script>
+
+
+    
+    
+    <link rel="stylesheet" href="/assets/css/contact.css" />
+    
+  </head>
+  <body>
+  <header>
+  
+  <div id="navbar" class="structure">
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+      
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" style="padding:0" href="/"><img src="/assets/brand-logo.png" alt="home" /></a>
+      </div>
+      
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+        
+          <li role="presentation">
+            <a href="/" aria-controls="messages">Home</a>
+          </li>
+        
+          <li role="presentation">
+            <a href="/contact/" aria-controls="messages">Contact</a>
+          </li>
+        
+          <li role="presentation">
+            <a href="/about/" aria-controls="messages">About</a>
+          </li>
+        
+          <li role="presentation">
+            <a href="/posts/" aria-controls="messages">Posts</a>
+          </li>
+        
+        </ul>
+        
+          
+<ul class="social-links nav navbar-nav navbar-right text-right">
+
+  
+  
+  <li>
+    <a href="/" title="github">
+      <i class="fa fa-github fa-2x "></i>
+    </a>
+  </li>
+
+  
+  
+  <li>
+    <a href="/" title="gitlab">
+      <i class="fa fa-gitlab fa-2x "></i>
+    </a>
+  </li>
+
+  
+  
+  <li>
+    <a href="/" title="stack-overflow">
+      <i class="fa fa-stack-overflow fa-2x "></i>
+    </a>
+  </li>
+
+  
+  
+  <li>
+    <a href="/" title="twitter">
+      <i class="fa fa-twitter fa-2x "></i>
+    </a>
+  </li>
+</ul>
+
+        
+      </div>
+      
+    </div>
+  </nav>
+</div>
+
+</header>
+
+  <article id="article" class="structure container-fluid">
+    <div class="row flex-row">
+      <div id="content" class="structure col-xs-12 col-md-9">
+        <h1>Contact</h1>
+<div class="container">
+  <div class="row contact">
+    <div class="col-xs-12 col-md-6">
+      <div class="form">
+  <form id="contact-form" class="contact-form" action="" method="POST">
+    <p>
+      <label for="name">Name: <span class="required">*</span></label>
+      <input class="input" id="name" type="text" name="name" value="" placeholder="Your Name" required="required" />
+    </p>
+    <p>
+      <label for="_replyto">Email Address: <span class="required">*</span></label>
+      <input class="input" id="_replyto" type="email" name="_replyto" value="" placeholder="email@website.com" required="required" />
+    </p>
+    <p>
+      <label for="message">Message: <span class="required">*</span></label>
+      <textarea class="textarea input" id="message" name="message" placeholder="Your message..." required="required"></textarea>
+    </p>
+    <p>
+      <small class="small"><span class="required">*</span> indicates a required field</small>
+      <input class="button" type="submit" value="Send message" />
+    </p>
+    <p>
+    </p>
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="Message from  website">
+    <input type="hidden" name="_next" value="" />
+  </form>
+</div>
+<script>
+  var email = "moc.niamod@liame-ruoy";
+  var unraveledEmail = email.split("").reverse().join("");
+  var form = document.getElementById("contact-form");
+  form.setAttribute("action", "https://formspree.io/" + unraveledEmail);
+  console.log(unraveledEmail)
+</script>
+<noscript>Please enable JavaScript to use the form.</noscript>
+
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14423.063336987463!2d131.02839106881993!3d-25.345637598925716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2b236c2b6d625223%3A0x43a8cd4d9bc55f21!2sUluru!5e0!3m2!1sen!2sau!4v1509929054552"></iframe>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      
+    </div>
+  </article>
+  <footer class="row flex-row">
+  <ul id="footer-nav-one" class="structure text-center">
+    <li>
+      <span class="glyphicon glyphicon-copyright-mark"></span>&nbsp;<a href="#">My Site</a>
+    </li>
+	  
+	  <li>
+	    <span>By: <a href="https://github.io/sgpinkus/" target="_blank">sgpinkus</a></span>
+	  </li>
+	  
+  </ul>
+  
+  
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+.fa-bitbucket[class~="fa-x-label"]:after {
+  content: " Bitbucket"
+}
+.fa-digg[class~="fa-x-label"]:after {
+  content: " Digg"
+}
+.fa-dropbox[class~="fa-x-label"]:after {
+  content: " Dropbox"
+}
+.fa-facebook[class~="fa-x-label"]:after {
+  content: " Facebook"
+}
+.fa-flickr[class~="fa-x-label"]:after {
+  content: " Flickr"
+}
+.fa-foursquare[class~="fa-x-label"]:after {
+  content: " Foursquare"
+}
+.fa-github[class~="fa-x-label"]:after {
+  content: " Github"
+}
+.fa-google[class~="fa-x-label"]:after {
+  content: " Google"
+}
+.fa-google-plus[class~="fa-x-label"]:after {
+  content: " Google-plus"
+}
+.fa-instagram[class~="fa-x-label"]:after {
+  content: " Instagram"
+}
+.fa-jsfiddle[class~="fa-x-label"]:after {
+  content: " Jsfiddle"
+}
+.fa-linkedin[class~="fa-x-label"]:after {
+  content: " Linkedin"
+}
+.fa-pinterest[class~="fa-x-label"]:after {
+  content: " Pinterest"
+}
+.fa-reddit[class~="fa-x-label"]:after {
+  content: " Reddit"
+}
+.fa-skype[class~="fa-x-label"]:after {
+  content: " Skype"
+}
+.fa-soundcloud[class~="fa-x-label"]:after {
+  content: " Soundcloud"
+}
+.fa-spotify[class~="fa-x-label"]:after {
+  content: " Spotify"
+}
+.fa-stack-exchange[class~="fa-x-label"]:after {
+  content: " Stack-exchange"
+}
+.fa-stack-overflow[class~="fa-x-label"]:after {
+  content: " Stack-overflow"
+}
+.fa-steam[class~="fa-x-label"]:after {
+  content: " Steam"
+}
+.fa-stumbleupon[class~="fa-x-label"]:after {
+  content: " Stumbleupon"
+}
+.fa-tumblr[class~="fa-x-label"]:after {
+  content: " Tumblr"
+}
+.fa-twitter[class~="fa-x-label"]:after {
+  content: " Twitter"
+}
+.fa-vimeo-square[class~="fa-x-label"]:after {
+  content: " Vimeo-square"
+}
+.fa-vine[class~="fa-x-label"]:after {
+  content: " Vine"
+}
+.fa-windows[class~="fa-x-label"]:after {
+  content: " Windows"
+}
+.fa-wordpress[class~="fa-x-label"]:after {
+  content: " Wordpress"
+}
+.fa-yahoo[class~="fa-x-label"]:after {
+  content: " Yahoo"
+}
+.fa-youtube[class~="fa-x-label"]:after {
+  content: " Youtube"
+}

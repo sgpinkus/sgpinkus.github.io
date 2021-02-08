@@ -6,7 +6,7 @@
 title: "My Site"
 email: your-email@domain.com
 # This *MUST* be defined. If content served from root path set to empty string *NOT* "/".
-baseurl: "/jekyll-bootstrap-structure"
+# baseurl: ""
 url: ""
 # Build settings
 # If you install this theme as a ruby gem theme uncomment this line.
@@ -18,8 +18,13 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - tests/
-  - "*.sh"
+  - package.json
+  - package-lock.json
+  - jekyll-bootstrap-structure.gemspec
+  - README.md
+  - LICENSE.txt
+include:
+  - node_modules
 # Use this to include optional structural components
 defaults:
   - scope:
