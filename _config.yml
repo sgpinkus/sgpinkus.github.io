@@ -25,8 +25,9 @@ exclude:
   - LICENSE.txt
 include:
   - node_modules
-# Use this to include optional structural components
+  - .nojekyll
 defaults:
+  # Use this to include optional structural components
   - scope:
       path: ""
       type: "pages"
