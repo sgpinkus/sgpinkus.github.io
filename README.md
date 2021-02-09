@@ -2,35 +2,34 @@
 Provides a scaffold for a HTML site based on [bootstrap's](https://getbootstrap.com/docs/3.3/) [grid system](https://getbootstrap.com/docs/3.3/css/#grid) and bootstrap framework in general. See [Layout](#layout).
 
 # Installation
-There is two ways to install jekyll themes:
+There is two ways to install jekyll themes: 1. Clone the repo and add start adding your content to a fork. 2. Install as a jekyll ruby gem. Following only covers the former method ...
 
-  1. Clone the repo and add start adding your content to a fork.
-  2. Install as a jekyll ruby gem.
+### Install Jekyll
+```
+sudo apt-get install ruby-full build-essential zlib1g-dev
+echo >>~/.bashrc <<EOF
+# Install Ruby Gems to ~/local/gems
+export GEM_HOME="$HOME/local/gems"
+export PATH="$HOME/local/gems/bin:$PATH"
+EOF
+```
 
-## As a Basis for a site.
+### Build
+```
+git clone git@github.com:sgpinkus/jekyll-bootstrap-structure.git my-site
+cd my-site
+npm i
+edit _config.yml _fronts/* # Edit pages.
+jekyll build
+jekyll serve # Test locally
+```
 
-    git clone ...jekyll-bootstrap-structure
-    bundle install --path vendor/bundle
-    bower install --force
-    bundle exec jekyll build
-
-## As a Ruby Gem Theme
-Ruby gem style themes basically provide default components of a Jekyll site. Specifically they provide defaults for `_layouts/`, `_includes/`, `_sass/`, and `assets/` directories. That's a problem here because we want `bower.json` manifest file for JS deps, and `posts/` from the theme. You could copy them into your content repo. Or you can install the gem then copy these files out of the gem's location:
-
-    cd /tmp/ && git clone ...jekyll-bootstrap-structure && cd - # Get a jekyll conf to work with.
-    jekyll new my-theme && cd my-theme
-    cp -f /tmp/jekyll-bootstrap-structure/{_config.yml,Gemfile}
-    edit Gemfile _config.yml # Uncomment lines about jekyll-bootstrap-structure.
-
-Then the build is like:
-
-    bundle install # Installs jekyll-bootstrap-structure as a gem in your ruby path.
-    cp -a $(bundle info --path jekyll-bootstrap-structure)/{posts/,bower.json} .
-    bower install --force
-    bundle exec jekyll build
-
-## GH-Pages Setup
-Because of the minor gem dependencies and bower deps this theme won't auto build properly with github pages (gh-pages). Github support for static sites is pretty limited. Just build the site locally then upload.
+### Host on Github
+```
+git remote add origin ...
+git subtree split --prefix=_site -b gh-pages
+git push origin gh-pages
+```
 
 # Configuration
 This is a list of all site configuration variables used in templates. See [_config.yml](_config.yml) sample configuration.
