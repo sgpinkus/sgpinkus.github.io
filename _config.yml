@@ -52,7 +52,7 @@ defaults:
 # See _data/social_sites_db.yml for list of support sites.
 designer:
   name: sgpinkus
-  url: https://github.io/sgpinkus/
+  url: https://github.io/sgpinkus/jekyll-bootstrap-structure
 google_analytics_id: UA-xxxxxxxx-x
 # navbar links must be absolute
 navbar:

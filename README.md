@@ -7,17 +7,14 @@ There is two ways to install jekyll themes: 1. Clone the repo and add start addi
 ### Install Jekyll
 ```
 sudo apt-get install ruby-full build-essential zlib1g-dev
-echo >>~/.bashrc <<EOF
-# Install Ruby Gems to ~/local/gems
-export GEM_HOME="$HOME/local/gems"
-export PATH="$HOME/local/gems/bin:$PATH"
-EOF
 ```
 
 ### Build
 ```
-git clone git@github.com:sgpinkus/jekyll-bootstrap-structure.git my-site
-cd my-site
+git clone https://github.com/sgpinkus/jekyll-bootstrap-structure.git my-site && cd my-site
+export GEM_HOME="$HOME/ruby/gems" # Dont have to do this. Just depends where you wnat ruby crap to get installed.
+export PATH="$HOME/ruby/gems/bin:$PATH"
+bundle i
 npm i
 edit _config.yml _fronts/* # Edit pages.
 jekyll build
