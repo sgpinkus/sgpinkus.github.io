@@ -3,7 +3,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "My Site"
+title: "My Posts"
 email: your-email@domain.com
 # This *MUST* be defined. If content served from root path set to empty string *NOT* "/".
 # Set to /jekyll-bootstrap-structure/ here so demo site serves from gh-pages automatically.
@@ -59,15 +59,8 @@ designer:
 google_analytics_id: UA-xxxxxxxx-x
 # navbar links must be absolute
 navbar:
-  menu:
-    Home: /
-    Contact: /contact/
-    About: /about/
-    Posts: /posts/
-  # logo: /assets/brand-logo.png
   home-icon: 1
   social:
     github: /
-    gitlab: /
     stack-overflow: /
-    twitter: /
+    # twitter: /

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Posts
+permalink: /
 ---
 <ul class="post-index post-list">
   {% assign posts_pinned = paginator.posts | where_exp:"item", "item.pinned >= 1" | reversed %}
