@@ -56,7 +56,7 @@ defaults:
 designer:
   name: sgpinkus
   url: https://github.io/sgpinkus/jekyll-bootstrap-structure
-google_analytics_id: UA-xxxxxxxx-x
+google_analytics_id: G-9QNHBJ7LFD
 # navbar links must be absolute
 navbar:
   home-icon: 1
