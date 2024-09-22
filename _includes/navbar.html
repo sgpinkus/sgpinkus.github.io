@@ -3,20 +3,22 @@
     <div class="container">
       <div class="navbar-header">
       {% if site.navbar.logo %}
+        <a class="navbar-brand" style="padding:0" href="{{ "/" | relative_url }}"><img src="{{ site.navbar.logo | relative_url }}" style='height:100%' alt="home" /></a>
+      {% endif %}
+      </div>
+      {% if site.navbar.menu or site.navbar.social %}
         <!-- Brand and toggle get grouped for better mobile display -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" style="padding:0" href="{{ "/" | relative_url }}"><img src="{{ site.navbar.logo | relative_url }}" style='height:100%' alt="home" /></a>
       {% endif %}
       {% if site.navbar.home-icon %}
-        <ul class="social-links nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav social-links">
           <li>
             <a href="/" title=""><i class="fa fa-home fa-{{ "2x" | default: 'lg' }}"></i>{{ include.separator  }}</a>
           </li>
         </ul>
       {% endif %}
-      </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       {% if site.navbar.menu %}
       <!-- Collect the nav links, forms, and other content for toggling -->

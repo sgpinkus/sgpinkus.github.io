@@ -18,6 +18,11 @@ header {
     flex-flow: row wrap;
     align-items: center;
     height: $my-height;
+    margin: 0;
+  }
+  .social-links {
+    padding: 0;
+    margin: 0;
   }
   .social-links a {
     padding-top: 0;
