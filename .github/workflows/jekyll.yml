@@ -1,0 +1,44 @@
+name: Deploy Jekyll site to Pages
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: sp99/ruby-jekyll:latest
+      options: --user root --workdir /home/build
+      env:
+        HOME: /home/build
+        PWD: /home/build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: npm
+        run: apt-get update -y && apt-get install npm -y
+      - name: bundle i
+        run: bundle i
+      - name: npm i
+        run: npm i
+      - name: bundle exec jekyll build
+        run: bundle exec jekyll build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
