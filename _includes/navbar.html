@@ -17,9 +17,9 @@
         </ul>
       {% endif %}
       </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       {% if site.navbar.menu %}
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
         {% for item in site.navbar.menu %}
           <li role="presentation">
@@ -27,24 +27,24 @@
           </li>
         {% endfor %}
         </ul>
-        {% if site.navbar.social %}
-          {% comment %}
-          social_sites_db = "bitbucket digg dropbox facebook flickr foursquare github gitlab google google-plus instagram jsfiddle linkedin pinterest reddit skype soundcloud spotify stack-exchange stack-overflow steam stumbleupon tumblr twitter vimeo-square vine windows wordpress yahoo youtube" | split:" "
-          {% endcomment %}
-          <ul class="social-links nav navbar-nav navbar-right text-right">
-          {% for social in site.navbar.social %}
-            {% assign name = social[0]  %}
-            {% assign link = social[1]  %}
-            <li>
-              <a href="{{ link }}" title="{{ name }}">
-                <i class="fa fa-{{ name }} fa-{{ "2x" | default: 'lg' }} {% if page.labels %}fa-x-label{% endif -%}"></i>{{ include.separator  }}
-              </a>
-            </li>
-          {% endfor -%}
-          </ul>
-        {% endif %}
-      </div>
       {% endif %}
+      {% if site.navbar.social %}
+        {% comment %}
+        social_sites_db = "bitbucket digg dropbox facebook flickr foursquare github gitlab google google-plus instagram jsfiddle linkedin pinterest reddit skype soundcloud spotify stack-exchange stack-overflow steam stumbleupon tumblr twitter vimeo-square vine windows wordpress yahoo youtube" | split:" "
+        {% endcomment %}
+        <ul class="social-links nav navbar-nav navbar-right text-right">
+        {% for social in site.navbar.social %}
+          {% assign name = social[0]  %}
+          {% assign link = social[1]  %}
+          <li>
+            <a href="{{ link }}" title="{{ name }}">
+              <i class="fa fa-{{ name }} fa-{{ "2x" | default: 'lg' }} {% if page.labels %}fa-x-label{% endif -%}"></i>{{ include.separator  }}
+            </a>
+          </li>
+        {% endfor -%}
+        </ul>
+      {% endif %}
+      </div>
     </div>
   </nav>
 </div>
