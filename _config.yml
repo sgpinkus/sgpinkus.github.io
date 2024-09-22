@@ -6,6 +6,7 @@
 title: "My Site"
 email: your-email@domain.com
 # This *MUST* be defined. If content served from root path set to empty string *NOT* "/".
+# Set to /jekyll-bootstrap-structure/ here so demo site serves from gh-pages automatically.
 baseurl: "/jekyll-bootstrap-structure/"
 url: ""
 # Build settings
@@ -23,6 +24,7 @@ exclude:
   - jekyll-bootstrap-structure.gemspec
   - README.md
   - LICENSE.txt
+  - ruby
 include:
   - node_modules
   - .nojekyll

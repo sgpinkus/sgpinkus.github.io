@@ -1,8 +1,9 @@
 ---
-my-margin: 20px
 ---
+@import "variables";
+
 .contact > div {
-  margin: {{ page.my-margin }}
+  margin: $my-margin;
 }
 
 .map iframe {

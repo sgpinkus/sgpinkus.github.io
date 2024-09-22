@@ -1,0 +1,6 @@
+.bundle/
+ruby/
+node_modules/
+.npm/
+.bash_history
+_site/

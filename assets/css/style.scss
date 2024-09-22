@@ -1,0 +1,107 @@
+---
+---
+@import "variables";
+
+header, footer {
+  background-color: #222;
+  color: #9d9d9d;
+}
+
+header, footer {
+  min-height: $my-height;
+}
+
+
+header {
+  ul.navbar-nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: $my-height;
+  }
+  .social-links a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  list-style-type: none;
+  display: inline-block;
+  height: $my-height;
+  line-height: $my-height;
+}
+
+footer li:not(:first-child):before {
+  content: " | "
+}
+
+.post-list {
+  padding-left: 0;
+}
+
+.post-list li {
+  list-style-type: none;
+}
+
+.navbar {
+  border: 0;
+  margin-bottom: 0;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display:flex;
+  flex-flow: column wrap;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#article {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+#article, #navbar, #banner, footer *[id|="footer-nav"] {
+  margin: 0 auto;
+}
+
+@if $my-max-width {
+  #article, #navbar, #banner, footer *[id|="footer-nav"] {
+    max-width: $my-max-width;
+  }
+}
+
+#aside .btn {
+  margin-top: $my-margin-top;
+  margin-bottom: $my-margin-bottom;
+}
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-row > div:first-child {
+  flex-grow: 1;
+}
+
